@@ -32,5 +32,7 @@ public class ForEachLoop {
         for (int num : arr2) {
             System.out.print(num + " "); // Print each element followed by a space
         }
+
+        sc.close();
     }
 }
