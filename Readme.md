@@ -19,7 +19,7 @@ In the process of preparing for technical interviews and enhancing my skills in 
 
 The repository is structured as follows:
 
-- **/Arrays**: Contains Java programs related to array manipulation, searching, and sorting algorithms.
+- **/Array and ArrayLists**: Contains Java programs related to array manipulation, searching, and sorting algorithms.
 - **/LinkedLists**: Includes Java implementations of various types of linked lists and related problems.
 - **/Trees**: Consists of Java programs related to binary trees, binary search trees, and tree traversal algorithms.
 - **/Sorting**: Contains Java implementations of popular sorting algorithms such as Bubble Sort, Merge Sort, Quick Sort, etc.
