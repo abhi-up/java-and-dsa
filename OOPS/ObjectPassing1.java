@@ -34,6 +34,7 @@ public class ObjectPassing1 {
         Car car2 = new Car("Rolls Royce");
 
         // Call the park() method on the Garage object, passing each Car object
+        System.out.println();
         garage.park(car1); // Park MustangGT
         garage.park(car2); // Park Rolls Royce
     }
