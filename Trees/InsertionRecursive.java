@@ -24,27 +24,34 @@ class BinarySearchTree {
         this.root = null;
     }
 
+    // Method to insert a new node with given data into the binary search tree
     public void insert(int data) {
-        insert(root, data);
-    }
+        TreeNode node = new TreeNode(data); // Creating a new node with given data
 
-    // Method to insert a new node with given data into the BST recursively
-    TreeNode insert(TreeNode root, int data) {
-        // If the root is null, create a new node with the given data and return it as
-        // the new root
+        // If the tree is empty, make the new node as the root and return
         if (root == null) {
-            root = new TreeNode(data);
-            return root;
+            root = node;
+            return;
         }
 
-        // If the data is less than or equal to the current node's data, recursively
-        // insert into the left subtree
-        if (data <= root.data) {
-            return insert(root.left, data);
-        }
+        TreeNode current = root; // Start traversing from the root node
 
-        // Otherwise, recursively insert into the right subtree
-        return insert(root.right, data);
+        // Traverse the tree to find the appropriate position to insert the new node
+        while (true) {
+            if (data <= current.data) { // If data is less than or equal to the current node's data
+                if (current.left == null) { // If left child is null, insert the new node as the left child
+                    current.left = node;
+                    break;
+                }
+                current = current.left; // Move to the left child
+            } else { // If data is greater than the current node's data
+                if (current.right == null) { // If right child is null, insert the new node as the right child
+                    current.right = node;
+                    break;
+                }
+                current = current.right; // Move to the right child
+            }
+        }
     }
 
     // Method to provide a string representation of the root node's data
@@ -53,7 +60,7 @@ class BinarySearchTree {
     }
 }
 
-public class MyBinarySearchTree {
+public class InsertionRecursive {
     public static void main(String[] args) {
         BinarySearchTree root = new BinarySearchTree(); // Creating a new instance of BinarySearchTree
 
