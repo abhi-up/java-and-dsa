@@ -38,10 +38,8 @@ Here's a list of some key programs available in this repository:
 4. **Depth First Search (DFS)**: Implementation of DFS algorithm for traversing graphs.
 5. **Breadth First Search (BFS)**: Implementation of BFS algorithm for traversing graphs.
 6. **Fibonacci Series**: Program to generate Fibonacci series using recursion and dynamic programming.
-7. **Knapsack Problem**: Implementation of the 0/1 knapsack problem using dynamic programming.
-8. **String Anagram**: Program to check if two strings are anagrams of each other.
+7. **String Anagram**: Program to check if two strings are anagrams of each other.
 9. **Maximum Subarray Sum**: Program to find the maximum sum of a contiguous subarray.
-10. **Binary Tree Traversal**: Implementation of in-order, pre-order, and post-order traversal of a binary tree.
 
 ## Usage
 
