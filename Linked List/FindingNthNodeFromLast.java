@@ -42,13 +42,27 @@ class LinkedList {
     }
 
     public int getNodeFromLast(int pos) {
-        int idx = size - pos;
+        // int idx = size - pos;
 
-        while (idx != 0) {
-            head = head.next;
-            idx--;
+        // while (idx != 0) {
+        // head = head.next;
+        // idx--;
+        // }
+        // return head.data;
+
+        // ------------- Optimized Approach -----------------
+        Node slow = head;
+        Node fast = head;
+
+        for (int i = 0; i < pos; i++) {
+            fast = fast.next;
         }
-        return head.data;
+
+        while (fast != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow.data;
     }
 }
 
