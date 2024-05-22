@@ -16,6 +16,31 @@ class ListNode {
     }
 }
 
+public class Solution {
+    public static ListNode middleNode(ListNode head) {
+        int size = 0;
+        ListNode temp = head;
+
+        // Calculate the size of the linked list
+        while (temp != null) {
+            size++;
+            temp = temp.next;
+        }
+
+        // Calculate the middle index (0-based index)
+        int middle = size / 2;
+        temp = head;
+
+        // Move to the middle node
+        while (middle != 0) {
+            temp = temp.next;
+            middle--;
+        }
+
+        return temp;
+    }
+}
+
 public class LeetCodeMiddleOfLL {
     public static void main(String[] args) {
         // Create a linked list: 1 -> 2 -> 3 -> 4 -> 5
@@ -40,18 +65,5 @@ public class LeetCodeMiddleOfLL {
         // Find the middle node of the second list
         ListNode middle2 = Solution.middleNode(head2);
         System.out.println("The middle node's value is: " + middle2.val);
-    }
-}
-
-class Solution {
-    public static ListNode middleNode(ListNode head) {
-        ListNode slow = head;
-        ListNode fast = head;
-
-        while (fast != null && fast.next != null) {
-            fast = fast.next.next;
-            slow = slow.next;
-        }
-        return slow;
     }
 }
