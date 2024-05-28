@@ -8,6 +8,7 @@ public class TreeSample {
 
         // Creating right child node with data 10 and attaching it to the root
         root.right = new TreeNode(10);
+
     }
 }
 
